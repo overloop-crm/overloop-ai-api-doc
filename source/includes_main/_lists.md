@@ -26,129 +26,14 @@ name | no | **string** <br />The list's name
 created_at | no | **datetime** <br />ISO 8601 format with timezone offset
 updated_at | no | **datetime** <br />ISO 8601 format with timezone offset
 
-
-## Create a list
-```shell
-# DEFINITION
-POST https://api.overloop.com/public/v1/lists
-
-# EXAMPLE
-curl -X POST "https://api.overloop.com/public/v1/lists" \
--H "Authorization: your_api_key" \
--H "Content-Type: application/vnd.api+json; charset=utf-8" \
--d '{
-  "data": {
-    "type": "lists",
-    "attributes": {
-      "name": "A list name"
-    }
-  }
-}'
-```
-
-This will create a new list.
-
-### Parameters
-Parameter | Default | Description
---------- | ------- | ------------
-name<br />**required** - *string* | / | The list's name
-
-### Returns
-Returns the [list object](#the-list-object).
-
-## Retrieve a list
-```shell
-# DEFINITION
-GET https://api.overloop.com/public/v1/lists/{LIST_ID}
-
-# EXAMPLE
-curl -X GET "https://api.overloop.com/public/v1/lists/1" \
--H "Authorization: your_api_key" \
--H "Content-Type: application/vnd.api+json; charset=utf-8"
-```
-
-### Parameters
-Parameter | Description
---------- | -----------
-id<br />**required** - *integer* | The ID of the list to retrieve
-
-### Returns
-Returns the [list object](#the-list-object).
-
-## Update a list
-```shell
-# DEFINITION
-PATCH https://api.overloop.com/public/v1/lists/{LIST_ID}
-
-# EXAMPLE
-curl -X PATCH "https://api.overloop.com/public/v1/lists/1" \
--H "Authorization: your_api_key" \
--H "Content-Type: application/vnd.api+json; charset=utf-8" \
--d '{
-  "data": {
-    "type": "lists",
-    "attributes": {
-      "name": "LinkedIn bis"
-    }
-  }
-}'
-```
-
-Updates the specified list by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
-
-### Parameters
-Parameter | Description
---------- | -----------
-id<br />**required** - *integer* | The ID of the list to update
-name<br />*string* | The list's name
-
-### Returns
-Returns the [list object](#the-list-object).
-
-## Delete a list
-```shell
-# DEFINITION
-DELETE https://api.overloop.com/public/v1/lists/{CONTACT_ID}
-
-# EXAMPLE
-curl -X DELETE "https://api.overloop.com/public/v1/lists/1" \
--H "Authorization: your_api_key" \
--H "Content-Type: application/vnd.api+json; charset=utf-8"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "data": {
-    "id": "1",
-    "type": "lists"
-  }
-}
-```
-
-Permanently deletes a list. It cannot be undone.
-
-<aside class="notice">
-Warning — Deleting a list will keep the prospects of that list the `list_id` field to `NULL`
-</aside>
-
-### Parameters
-Parameter | Required? | Type | Description
---------- | --------- | -----| -----------
-id | **yes** | integer | The ID of the list to delete
-
-### Returns
-Returns an object containing the list ID.
-
 ## List lists
 
 ```shell
 # DEFINITION
-GET https://api.overloop.com/public/v1/lists
+GET https://api.overloop.ai/public/v1/lists
 
 # EXAMPLE
-curl -X GET "https://api.overloop.com/public/v1/lists" \
+curl -X GET "https://api.overloop.ai/public/v1/lists" \
 -H "Authorization: your_api_key" \
 -H "Content-Type: application/vnd.api+json; charset=utf-8"
 ```
@@ -174,9 +59,9 @@ curl -X GET "https://api.overloop.com/public/v1/lists" \
     }
   ],
   "links": {
-    "self": "https://api.overloop.com/public/v1/lists/?page%5Bnumber%5D=1&page%5Bsize%5D=100",
-    "next": "https://api.overloop.com/public/v1/lists/?page%5Bnumber%5D=2&page%5Bsize%5D=100",
-    "last": "https://api.overloop.com/public/v1/lists/?page%5Bnumber%5D=5&page%5Bsize%5D=100"
+    "self": "https://api.overloop.ai/public/v1/lists/?page%5Bnumber%5D=1&page%5Bsize%5D=100",
+    "next": "https://api.overloop.ai/public/v1/lists/?page%5Bnumber%5D=2&page%5Bsize%5D=100",
+    "last": "https://api.overloop.ai/public/v1/lists/?page%5Bnumber%5D=5&page%5Bsize%5D=100"
   }
 }
 ```

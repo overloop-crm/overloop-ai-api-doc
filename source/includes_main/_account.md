@@ -10,10 +10,10 @@
     "id": "1",
     "type": "companies",
     "attributes": {
-      "name": "Overloop",
-      "website": "https://overloop.com",
+      "name": "Overloop.ai",
+      "website": "https://overloop.ai",
       "phone_number": "",
-      "billing_name": "Overloop SRL",
+      "billing_name": "Overloop.ai SRL",
       "address": "rue de l'Evêché 10, 5000 Namur",
       "country": "BE",
       "vat": "BE0645917753",
@@ -47,10 +47,10 @@ updated_at | **datetime** <br />ISO 8601 format with timezone offset
 ## Retrieve your account
 ```shell
 # DEFINITION
-GET https://api.overloop.com/public/v1/account
+GET https://api.overloop.ai/public/v1/account
 
 # EXAMPLE
-curl -X GET "https://api.overloop.com/public/v1/account" \
+curl -X GET "https://api.overloop.ai/public/v1/account" \
 -H "Authorization: your_api_key" \
 -H "Content-Type: application/vnd.api+json; charset=utf-8"
 ```

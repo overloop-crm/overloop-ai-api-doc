@@ -11,11 +11,11 @@
     "type": "users",
     "attributes": {
       "name": "Vincenzo Ruggiero",
-      "email": "vincenzo@overloop.com",
+      "email": "vincenzo@overloop.ai",
       "role": "admin",
       "phone_number": "",
       "skype": "ruggiero.vincenzo",
-      "signature": "<p class=\"p1\"><span class=\"s1\">--&nbsp;<br /></span><span class=\"s1\"><strong>Vincenzo Ruggiero<br /></strong></span><span class=\"s1\">Founder<br /></span><span class=\"s2\"><a href=\"https://overloop.com/\"><strong>Overloop</strong><br /></a></span><span class=\"s2\"><a href=\"mailto:vincenzo@overloop.com\">vincenzo@overloop.com</a></span></p>",
+      "signature": "<p class=\"p1\"><span class=\"s1\">--&nbsp;<br /></span><span class=\"s1\"><strong>Vincenzo Ruggiero<br /></strong></span><span class=\"s1\">Founder<br /></span><span class=\"s2\"><a href=\"https://overloop.ai/\"><strong>Overloop.ai</strong><br /></a></span><span class=\"s2\"><a href=\"mailto:vincenzo@overloop.ai\">vincenzo@overloop.ai</a></span></p>",
       "disabled": false,
       "from_name": "Vincenzo Ruggiero",
       "timezone": "Brussels",
@@ -55,52 +55,13 @@ Object | Description
 --------- | -----------
 company | The user's company
 
-
-## Retrieve a user
-```shell
-# DEFINITION
-GET https://api.overloop.com/public/v1/users/{USER_ID}
-
-# EXAMPLE
-curl -X GET "https://api.overloop.com/public/v1/users/1" \
--H "Authorization: your_api_key" \
--H "Content-Type: application/vnd.api+json; charset=utf-8"
-```
-
-### Parameters
-Parameter | Description
---------- | -----------
-id<br />**required** - *integer* | The ID of the user to retrieve
-
-### Returns
-Returns the [user object](#the-user-object).
-
-## Me
-```shell
-# DEFINITION
-GET https://api.overloop.com/public/v1/me
-
-# EXAMPLE
-curl -X GET "https://api.overloop.com/public/v1/me" \
--H "Authorization: your_api_key" \
--H "Content-Type: application/vnd.api+json; charset=utf-8"
-```
-
-You can call this endpoint to retrive **your personnal information**.
-
-### Parameters
-*none*
-
-### Returns
-Returns your [user object](#the-user-object).
-
 ## List users
 ```shell
 # DEFINITION
-GET https://api.overloop.com/public/v1/users
+GET https://api.overloop.ai/public/v1/users
 
 # EXAMPLE
-curl -X GET "https://api.overloop.com/public/v1/users" \
+curl -X GET "https://api.overloop.ai/public/v1/users" \
 -H "Authorization: your_api_key" \
 -H "Content-Type: application/vnd.api+json; charset=utf-8"
 ```
@@ -126,9 +87,9 @@ curl -X GET "https://api.overloop.com/public/v1/users" \
     },
   ],
   "links": {
-    "self": "https://api.overloop.com/public/v1/users?page%5Bnumber%5D=1&page%5Bsize%5D=100",
-    "next": "https://api.overloop.com/public/v1/users?page%5Bnumber%5D=2&page%5Bsize%5D=100",
-    "last": "https://api.overloop.com/public/v1/users?page%5Bnumber%5D=5&page%5Bsize%5D=100"
+    "self": "https://api.overloop.ai/public/v1/users?page%5Bnumber%5D=1&page%5Bsize%5D=100",
+    "next": "https://api.overloop.ai/public/v1/users?page%5Bnumber%5D=2&page%5Bsize%5D=100",
+    "last": "https://api.overloop.ai/public/v1/users?page%5Bnumber%5D=5&page%5Bsize%5D=100"
   }
 }
 ```

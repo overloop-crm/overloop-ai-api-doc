@@ -1,11 +1,11 @@
 ---
-title: Overloop API Reference
+title: Overloop.ai API Reference
 
 language_tabs:
   - shell
 
 toc_footers:
-  - <a href='https://app.overloop.com/integrations/api'>Get your API Key</a>
+  - <a href='https://app.overloop.ai/integrations/api'>Get your API Key</a>
 
 includes:
   - introduction
@@ -17,18 +17,11 @@ includes:
   - errors
 
 includes_main:
-  - prospects
+  - leads
   - organizations
-  - pipelines
-  - stages
-  - deals
-  - automations
-  - automation_steps
-  - enrollments
   - account
   - users
   - lists
-  - custom_fields
   - exclusion_list_items
 
 search: true
