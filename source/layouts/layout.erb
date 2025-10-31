@@ -20,6 +20,10 @@ under the License.
     current_page.data.includes.each do |include|
       page_content += partial("includes/#{include}")
     end
+    page_content += partial('_main_title')
+    current_page.data.includes_main.each do |include|
+      page_content += partial("includes_main/#{include}")
+    end
   end
 %>
 
@@ -72,7 +76,7 @@ under the License.
       </span>
     </a>
     <div class="toc-wrapper">
-      <%= image_tag("overloop_ai_logo.png", width: '220') %>
+      <%= image_tag("overloop_ai_logo.png", class: 'logo') %>
       <% if language_tabs.any? %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>
@@ -93,7 +97,7 @@ under the License.
       <ul id="toc" class="toc-list-h1">
         <% toc_data(page_content).each do |h1| %>
           <li>
-            <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:title] %>"><%= h1[:content] %></a>
+            <a href="#<%= h1[:id] %>" class="toc-h1 toc-link <%= h1[:title] == 'API Endpoints' ? 'toc-h1--section-header' : '' %>" data-title="<%= h1[:title] %>"><%= h1[:content] %></a>
             <% if h1[:children].length > 0 %>
               <ul class="toc-list-h2">
                 <% h1[:children].each do |h2| %>

@@ -90,8 +90,8 @@ html, body {
   // This is the logo at the top of the ToC
   .logo {
     display: block;
-    max-width: 100%;
-    margin-bottom: $logo-margin;
+    width: calc(100% - (2 * #{$logo-margin}));
+    margin: 0 $logo-margin $logo-margin $logo-margin;
   }
 
   &>.search {
@@ -187,6 +187,13 @@ html, body {
   .toc-h2 {
     padding-left: $nav-padding + $nav-indent;
     font-size: 12px;
+  }
+
+  .toc-h1--section-header {
+    font-size: 1.3em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
   }
 
   .toc-footer {
