@@ -17,7 +17,7 @@ includes:
   - errors
 
 includes_main:
-  - leads
+  - prospects
   - organizations
   - account
   - users
@@ -30,5 +30,5 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the Overloop AI API
 ---
