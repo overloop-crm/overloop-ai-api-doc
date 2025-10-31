@@ -1,13 +1,13 @@
+ruby '>= 2.6'
 source 'https://rubygems.org'
-ruby '2.6.3'
-
 
 # Middleman
-gem 'ffi', '~> 1.9.25'
-gem 'middleman'
-gem 'middleman-gh-pages', '~> 0.0.3'
-gem 'middleman-syntax', '~> 2.1.0'
-gem 'middleman-autoprefixer', '~> 2.7.0'
-gem "middleman-sprockets", "~> 4.0.0.rc"
-gem 'rouge', '~> 1.10.1'
-gem 'redcarpet', '~> 3.3.2'
+gem 'middleman', '~> 4.4'
+gem 'middleman-syntax', '~> 3.2'
+gem 'middleman-autoprefixer', '~> 3.0'
+gem 'middleman-sprockets', '~> 4.1'
+gem 'rouge', '~> 3.21'
+gem 'redcarpet', '~> 3.6.0'
+gem 'nokogiri', '~> 1.13.3'
+gem 'sass'
+gem 'webrick'
