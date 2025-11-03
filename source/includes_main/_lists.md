@@ -11,6 +11,7 @@
     "type": "lists",
     "attributes": {
       "name": "LinkedIn",
+      "type": "prospects",
       "created_at": "2015-08-15T16:48:46+02:00",
       "updated_at": "2016-11-25T12:40:46+01:00"
     }
@@ -22,7 +23,8 @@
 Attribute | Filterable? | Description
 --------- | ----------- | -----------
 id | no | **integer** <br />A unique identifier for the list
-name | no | **string** <br />The list's name
+name | no | **string** <br />The list’s name
+type | no | **string** <br />The type of  the list’s associated record, either `prospects` or `organizations`
 created_at | no | **datetime** <br />ISO 8601 format with timezone offset
 updated_at | no | **datetime** <br />ISO 8601 format with timezone offset
 

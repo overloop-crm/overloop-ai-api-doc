@@ -14,14 +14,14 @@
       "website": "https://overloop.ai",
       "phone_number": "",
       "billing_name": "Overloop.ai SRL",
-      "address": "rue de l'Evêché 10, 5000 Namur",
+      "address": "rue des Pères Blancs 4, 1040 Brussels",
       "country": "BE",
       "vat": "BE0645917753",
-      "plan_name": "5K Credits",
-      "plan_code": "monthly_credits_5k",
-      "remaining_credits": 4999,
-      "created_at": "2015-08-15T16:48:46+02:00",
-      "updated_at": "2016-11-25T12:40:46+01:00"
+      "plan_name": "Starter",
+      "plan_code": "starter_monthly_usd",
+      "remaining_credits": 249,
+      "created_at": "2024-08-15T16:48:46+02:00",
+      "updated_at": "2025-10-25T12:40:46+01:00"
     }
   }
 }
@@ -31,15 +31,15 @@
 Attribute | Description
 --------- | -----------
 id | **integer** <br />A unique identifier for the account
-name | **string** <br />The account's name
-website | **string** <br />The account's website
-phone_number | **string** <br />The account's phone number
-billing_name | **string** <br />The account's billing name (the name that will appear on invoices)
-address | **string** <br />The account's address
-country | **string** <br />The account's country code (ISO)
-vat | **string** <br />The account's VAT number
-plan_name | **string** <br />The account's plan
-plan_code | **string** <br />The account's plan code
+name | **string** <br />The account’s name
+website | **string** <br />The account’s website
+phone_number | **string** <br />The account’s phone number
+billing_name | **string** <br />The account’s billing name (the name that will appear on invoices)
+address | **string** <br />The account’s address
+country | **string** <br />The account’s country code (ISO)
+vat | **string** <br />The account’s VAT number
+plan_name | **string** <br />The account’s plan
+plan_code | **string** <br />The account’s plan code
 remaining_credits | **integer** <br />The number of credits remaining
 created_at | **datetime** <br />ISO 8601 format with timezone offset
 updated_at | **datetime** <br />ISO 8601 format with timezone offset

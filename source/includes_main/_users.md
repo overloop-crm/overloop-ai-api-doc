@@ -38,22 +38,22 @@
 Attribute | Filterable? | Description
 --------- | ----------- | -----------
 id | no | **integer** <br />A unique identifier for the user
-name | no | **string** <br />The user's name
-email | no | **string** <br />The user's email address
-role | no | **string** <br />The user's role. Can be `admin` or `user`
-phone_number | no | **string** <br />The user's phone number
-skype | no | **string** <br />The user's Skype username
-signature | no | **string** <br />The user's HTML signature
-disabled | **yes** | **boolean** <br />Whether or not the user is disabled or not
+name | no | **string** <br />The user’s name
+email | no | **string** <br />The user’s email address
+role | no | **string** <br />The user’s role. Can be `admin`, `user` or `view_only`
+phone_number | no | **string** <br />The user’s phone number
+skype | no | **string** <br />The user’s Skype username
+signature | no | **string** <br />The user’s HTML signature
+disabled | **yes** | **boolean** <br />Whether the user is disabled or not
 from_name | no | **string** <br />The name we put in the email `from` field
-timezone | no | **string** <br />The user's time zone
+timezone | no | **string** <br />The user’s time zone
 created_at | no | **datetime** <br />ISO 8601 format with timezone offset
 updated_at | no | **datetime** <br />ISO 8601 format with timezone offset
 
 ### Relationships
 Object | Description
 --------- | -----------
-company | The user's company
+company | The user’s company
 
 ## List users
 ```shell

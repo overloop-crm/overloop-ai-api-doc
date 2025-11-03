@@ -19,10 +19,13 @@ includes:
 includes_main:
   - prospects
   - organizations
+  - automations
+  - automation_steps
   - account
   - users
   - lists
   - exclusion_list_items
+  - custom_fields
 
 search: true
 
