@@ -43,5 +43,5 @@ Error Code | Meaning
 405 | Method Not Allowed -- You tried to access a resource with an invalid method
 406 | Not Acceptable -- You requested a format that isn't json
 410 | Gone -- The resource requested has been removed from our servers
-500 | Unprocessable Entity -- You've provided invalid parameters with your request
+422 | Unprocessable Entity -- You've provided invalid parameters with your request
 503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
