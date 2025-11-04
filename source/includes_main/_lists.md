@@ -24,9 +24,106 @@ Attribute | Filterable? | Description
 --------- | ----------- | -----------
 id | no | **integer** <br />A unique identifier for the list
 name | no | **string** <br />The list’s name
-type | no | **string** <br />The type of  the list’s associated record, either `prospects` or `organizations`
+type | no | **string** <br />The type of the list’s associated record, either `prospects` or `organizations`
 created_at | no | **datetime** <br />ISO 8601 format with timezone offset
 updated_at | no | **datetime** <br />ISO 8601 format with timezone offset
+
+## Create a list
+```shell
+# DEFINITION
+POST https://api.overloop.ai/public/v1/lists
+
+# EXAMPLE
+curl -X POST "https://api.overloop.ai/public/v1/lists" \
+-H "Authorization: your_api_key" \
+-H "Content-Type: application/vnd.api+json; charset=utf-8" \
+-d '{
+  "data": {
+    "type": "lists",
+    "attributes": {
+      "name": "A list name"
+      "type": "prospects"
+    }
+  }
+}'
+```
+
+This will create a new list.
+
+### Parameters
+Parameter | Default | Description
+--------- | ------- | ------------
+name<br />**required** - *string* | / | The list’s name
+type<br />**required** - *string* | / | The record type associated to the list, either `prospects` or `organizations`
+
+### Returns
+Returns the [list object](#the-list-object).
+
+## Update a list
+```shell
+# DEFINITION
+PATCH https://api.overloop.ai/public/v1/lists/{LIST_ID}
+
+# EXAMPLE
+curl -X PATCH "https://api.overloop.ai/public/v1/lists/1" \
+-H "Authorization: your_api_key" \
+-H "Content-Type: application/vnd.api+json; charset=utf-8" \
+-d '{
+  "data": {
+    "type": "lists",
+    "attributes": {
+      "name": "LinkedIn bis"
+    }
+  }
+}'
+```
+
+Updates the specified list by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
+
+### Parameters
+Parameter | Description
+--------- | -----------
+id<br />**required** - *integer* | The ID of the list to update
+name<br />*string* | The list’s name
+
+### Returns
+Returns the [list object](#the-list-object).
+
+## Delete a list
+```shell
+# DEFINITION
+DELETE https://api.overloop.ai/public/v1/lists/{CONTACT_ID}
+
+# EXAMPLE
+curl -X DELETE "https://api.overloop.ai/public/v1/lists/1" \
+-H "Authorization: your_api_key" \
+-H "Content-Type: application/vnd.api+json; charset=utf-8"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "lists"
+  }
+}
+```
+
+Permanently deletes a list. It cannot be undone.
+
+<aside class="notice">
+Warning — Deleting a list will not remove the prospects that are present in that list.
+</aside>
+
+### Parameters
+Parameter | Description
+--------- | -----------
+id<br />**required** - *integer* | The ID of the list to 
+
+### Returns
+Returns the [list object](#the-list-object).
 
 ## List lists
 
