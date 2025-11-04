@@ -14,10 +14,7 @@
       "email": "vincenzo@overloop.ai",
       "role": "admin",
       "phone_number": "",
-      "skype": "ruggiero.vincenzo",
-      "signature": "<p class=\"p1\"><span class=\"s1\">--&nbsp;<br /></span><span class=\"s1\"><strong>Vincenzo Ruggiero<br /></strong></span><span class=\"s1\">Founder<br /></span><span class=\"s2\"><a href=\"https://overloop.ai/\"><strong>Overloop.ai</strong><br /></a></span><span class=\"s2\"><a href=\"mailto:vincenzo@overloop.ai\">vincenzo@overloop.ai</a></span></p>",
       "disabled": false,
-      "from_name": "Vincenzo Ruggiero",
       "timezone": "Brussels",
       "created_at": "2015-08-15T16:48:46+02:00",
       "updated_at": "2016-11-25T12:40:46+01:00"
@@ -42,10 +39,7 @@ name | no | **string** <br />The user’s name
 email | no | **string** <br />The user’s email address
 role | no | **string** <br />The user’s role. Can be `admin`, `user` or `view_only`
 phone_number | no | **string** <br />The user’s phone number
-skype | no | **string** <br />The user’s Skype username
-signature | no | **string** <br />The user’s HTML signature
 disabled | **yes** | **boolean** <br />Whether the user is disabled or not
-from_name | no | **string** <br />The name we put in the email `from` field
 timezone | no | **string** <br />The user’s time zone
 created_at | no | **datetime** <br />ISO 8601 format with timezone offset
 updated_at | no | **datetime** <br />ISO 8601 format with timezone offset
