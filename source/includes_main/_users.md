@@ -37,7 +37,7 @@ Attribute | Filterable? | Description
 id | no | **integer** <br />A unique identifier for the user
 name | no | **string** <br />The user’s name
 email | no | **string** <br />The user’s email address
-role | no | **string** <br />The user’s role. Can be `admin`, `user` or `view_only`
+role | no | **string** <br />The user’s role. Can be `admin`, `user` or `read_only`
 phone_number | no | **string** <br />The user’s phone number
 disabled | **yes** | **boolean** <br />Whether the user is disabled or not
 timezone | no | **string** <br />The user’s time zone
