@@ -11,7 +11,7 @@
     "type": "lists",
     "attributes": {
       "name": "LinkedIn",
-      "type": "prospects",
+      "list_type": "prospects",
       "created_at": "2015-08-15T16:48:46+02:00",
       "updated_at": "2016-11-25T12:40:46+01:00"
     }
@@ -24,7 +24,7 @@ Attribute | Filterable? | Description
 --------- | ----------- | -----------
 id | no | **integer** <br />A unique identifier for the list
 name | no | **string** <br />The list’s name
-type | no | **string** <br />The type of the list’s associated record, either `prospects` or `organizations`
+list_type | **yes** | **string** <br />The type of the list’s associated record, either `prospects` or `organizations`
 created_at | no | **datetime** <br />ISO 8601 format with timezone offset
 updated_at | no | **datetime** <br />ISO 8601 format with timezone offset
 
@@ -42,7 +42,7 @@ curl -X POST "https://api.overloop.ai/public/v1/lists" \
     "type": "lists",
     "attributes": {
       "name": "A list name"
-      "type": "prospects"
+      "list_type": "prospects"
     }
   }
 }'
@@ -54,7 +54,7 @@ This will create a new list.
 Parameter | Default | Description
 --------- | ------- | ------------
 name<br />**required** - *string* | / | The list’s name
-type<br />**required** - *string* | / | The record type associated to the list, either `prospects` or `organizations`
+list_type<br />**required** - *string* | / | The type of the list’s associated record, either `prospects` or `organizations`
 
 ### Returns
 Returns the [list object](#the-list-object).
