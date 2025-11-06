@@ -2328,7 +2328,7 @@ curl <span class="nt">-X</span> GET <span class="s2">"https://api.overloop.ai/pu
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lists"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LinkedIn"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prospects"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"list_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prospects"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-08-15T16:48:46+02:00"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-25T12:40:46+01:00"</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -2353,8 +2353,8 @@ curl <span class="nt">-X</span> GET <span class="s2">"https://api.overloop.ai/pu
 <td><strong>string</strong> <br />The list’s name</td>
 </tr>
 <tr>
-<td>type</td>
-<td>no</td>
+<td>list_type</td>
+<td><strong>yes</strong></td>
 <td><strong>string</strong> <br />The type of the list’s associated record, either <code>prospects</code> or <code>organizations</code></td>
 </tr>
 <tr>
@@ -2380,7 +2380,7 @@ curl <span class="nt">-X</span> POST <span class="s2">"https://api.overloop.ai/p
     "type": "lists",
     "attributes": {
       "name": "A list name"
-      "type": "prospects"
+      "list_type": "prospects"
     }
   }
 }'</span>
@@ -2400,9 +2400,9 @@ curl <span class="nt">-X</span> POST <span class="s2">"https://api.overloop.ai/p
 <td>The list’s name</td>
 </tr>
 <tr>
-<td>type<br /><strong>required</strong> - <em>string</em></td>
+<td>list_type<br /><strong>required</strong> - <em>string</em></td>
 <td>/</td>
-<td>The record type associated to the list, either <code>prospects</code> or <code>organizations</code></td>
+<td>The type of the list’s associated record, either <code>prospects</code> or <code>organizations</code></td>
 </tr>
 </tbody></table>
 <h3 id='returns'>Returns</h3>
