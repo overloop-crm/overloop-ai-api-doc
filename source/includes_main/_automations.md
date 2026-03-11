@@ -55,6 +55,18 @@
           "id": "a-z0-9-abc3",
           "type": "segments"
         }
+      },
+      "creator": {
+        "data": {
+          "id": "1",
+          "type": "users"
+        }
+      },
+      "sender": {
+        "data": {
+          "id": "2",
+          "type": "users"
+        }
       }
     }
   },
@@ -121,6 +133,8 @@ Object | Description
 steps | The [steps](#automation-steps) of the automation.
 enter_segment | The reference of the automation filters for the _enter_segment_ trigger event.
 filters | The conditions of the _enter_segment_ trigger event.
+creator | The [user](#the-user-object) who created the automation.
+sender | The [user](#the-user-object) who sends emails and performs LinkedIn actions for this automation.
 
 ## Retrieve an automation
 ```shell
@@ -173,6 +187,16 @@ curl -X GET "https://api.overloop.ai/public/v1/automations" \
           "data": {
             ...
           }
+        },
+        "creator": {
+          "data": {
+            ...
+          }
+        },
+        "sender": {
+          "data": {
+            ...
+          }
         }
       }
     },
@@ -189,6 +213,16 @@ curl -X GET "https://api.overloop.ai/public/v1/automations" \
           ]
         },
         "segment": {
+          "data": {
+            ...
+          }
+        },
+        "creator": {
+          "data": {
+            ...
+          }
+        },
+        "sender": {
           "data": {
             ...
           }
